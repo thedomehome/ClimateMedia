@@ -92,9 +92,6 @@ class Data:
     def get_col_index(self):
         return self.header2col
 
-# we need a method that will what? 
-# we need a method that will clean up the data, so, we go through each column and if there is nothing there, add a 
-
   
     def make_metric_data(self):
         #remember, always do one column more, since its not-inclusive bracketing
