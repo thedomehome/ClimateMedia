@@ -109,9 +109,14 @@ class Stats:
         return self.dict_list # get the list of csv dictionaries created
     
     
-    def replace(self, df, col, to_be_replaced, replacement):
+    def self_replace(self, col, to_be_replace, replacement):
+        self.df[col].replace(to_be_replace, replacement, regex=True, inplace=True)
+
+    def replace(df, col, to_be_replaced, replacement):
         # takes a single column and replaces whatever with the desired replacement
         df[col].replace(to_be_replaced, replacement, regex=True, inplace=True)
+
+    
 
 
     def clean_numbers(self, df, col_list):
